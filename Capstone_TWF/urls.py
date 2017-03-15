@@ -13,14 +13,39 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from accounts.views import index
+from django.conf.urls import url, include
+from rest_framework import routers
+from accounts.views import GroupViewSet, MemberViewSet
+from places.views import LocationViewSet, ZoneViewSet, GeotagViewSet
+from events.views import JourneyViewSet, CheckInViewSet
+from accounts.views import login, registration
+
+router = routers.DefaultRouter()
+router.register(r'groups', GroupViewSet)
+router.register(r'users', MemberViewSet)
+router.register(r'locations', LocationViewSet)
+router.register(r'zones', ZoneViewSet)
+router.register(r'geotags', GeotagViewSet)
+router.register(r'journeys', JourneyViewSet)
+router.register(r'check_ins', CheckInViewSet)
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^home/', index)
-    url(r'register/', register.html)
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                  url(r'^admin/', admin.site.urls),  # TODO: Django honeypot?
+                  # url(r'^logout/', admin.site.urls),
+
+                  # Auth
+                  url(r'^login/', login, name='login'),
+                  url(r'register/', registration, name='register'),
+
+                  # url(r'^#forgot/', forgot_password )
+
+                  # Wire up our API using automatic URL routing.
+                  # Additionally, we include login URLs for the browsable API.
+
+                  # DRF
+                  url(r'^api/', include(router.urls)),
+                  url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

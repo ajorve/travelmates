@@ -1,24 +1,20 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from geoposition.fields import GeopositionField
-from events.models import CheckIn
+from phonenumber_field.modelfields import PhoneNumberField
 
 
-class Member(models.Model):
+class Member(AbstractUser):
     """
     Create Member class.
     """
-    user = models.OneToOneField(User)
-    mobile_number = models.CharField(max_length=10)
-    profile_image = models.ImageField()
-    home_location = GeopositionField(null=False)
+    phone = PhoneNumberField()
+    image = models.ImageField(upload_to='media', null=True)
+    default_location = GeopositionField(null=False)
 
     def latest_location(self):
-        location = self.check_ins.latest('place')
-        return location
-
-    class Meta:
-        ordering = ['user']
+        last_location = self.check_ins.latest('place')
+        return last_location
 
     def __str__(self):
-        return str(self.user)
+        return str(self.username)

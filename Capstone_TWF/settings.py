@@ -24,9 +24,10 @@ SECRET_KEY = '5bu$43&t_emf87t)_p8r#6nm-0=9!&dseh+v+i=4j8))6bmbho'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
+# Application Boostrap Default Admin https://github.com/django-admin-bootstrapped/django-admin-bootstrapped
 
 INSTALLED_APPS = [
     'django_admin_bootstrapped',
@@ -36,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'phonenumber_field',
+    'bootstrap3',
     'geoposition',
     'googlemaps',
     'rest_framework',
@@ -45,7 +48,7 @@ INSTALLED_APPS = [
 
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -76,6 +79,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Capstone_TWF.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.Member'
+
+
+#GEOPOSTION Settings https://github.com/philippbosch/django-geoposition
+
+GEOPOSITION_MAP_OPTIONS = {
+    'minZoom': 3,
+    'maxZoom': 15,
+    'zoom': 16,
+}
+
+GEOPOSITION_MARKER_OPTIONS = {
+    'cursor': 'move'
+}
+
+GEOPOSITION_MAP_WIDGET_HEIGHT = 200
+
 # API_KEYS
 GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyD-MarMdbhA-5ue35FdjvvhNVVtPVd354I',
 GOOGLE_PLACES_API_KEY = 'AIzaSyAxh2DBPm0WjGhaXBBZEQOgg3UbFij3lrY',
@@ -92,6 +112,17 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+        'rest_framework.permissions.IsAdminUser',
+    ],
+    'PAGE_SIZE': 10
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -134,3 +165,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
