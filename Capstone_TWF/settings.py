@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phonenumber_field',
+    'drf_dark_theme',
+    'corsheaders',
     'geoposition',
     'googlemaps',
     'rest_framework',
@@ -51,6 +53,7 @@ INSTALLED_APPS = [
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -118,6 +121,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
         'rest_framework.permissions.IsAdminUser',
     ],
+    #https://github.com/aledista/drf-dark-theme
+    'DEFAULT_RENDERER_CLASSES': [
+        'drf_dark_theme.renderers.StellarBrowsableAPIRenderer'
+    ],
     'PAGE_SIZE': 10
 }
 
@@ -160,7 +167,18 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "accounts", "static"),
     os.path.join(BASE_DIR, "templates", "app"),
-    ]
+    os.path.join(BASE_DIR, "templates", "app", "node_modules"),
+    os.path.join(BASE_DIR, "templates", "app", "plugins"),
+    os.path.join(BASE_DIR, "templates", "app", "resources"),
+    os.path.join(BASE_DIR, "templates", "app", "src"),
+    os.path.join(BASE_DIR, "templates", "app", "www"),
+    os.path.join(BASE_DIR, "templates", "app", ".editorconfig"),
+    os.path.join(BASE_DIR, "templates", "app", "ionic.config.json"),
+    os.path.join(BASE_DIR, "templates", "app", "npm-debug.log"),
+    os.path.join(BASE_DIR, "templates", "app", "package.json"),
+    os.path.join(BASE_DIR, "templates", "app", "tsconfig.json"),
+    os.path.join(BASE_DIR, "templates", "app", "tslint.json"),
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -172,11 +190,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 from private.secrets import GMAIL_PASSWORD
 
 DEFAULT_FROM_EMAIL = 'ajorve@gmail.com'
-
-# if DEBUG:
-#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-#
-# else:
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'ajorve'

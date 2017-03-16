@@ -28,7 +28,7 @@ class CheckIn(models.Model):
         self.check_in = datetime.now()
 
     def __str__(self):
-        return str(self.place)
+        return self.place
 
     class Meta:
         ordering = ('time',)

@@ -1,9 +1,6 @@
 from rest_framework import viewsets
-from django.shortcuts import render, redirect
 from events.serializers import CheckInSerializer, JourneySerializer
 from events.models import Journey, CheckIn
-from django.contrib.auth.decorators import login_required
-
 
 # Create your views here.
 
@@ -22,9 +19,3 @@ class JourneyViewSet(viewsets.ModelViewSet):
     """
     queryset = Journey.objects.all()
     serializer_class = JourneySerializer
-
-
-# @login_required
-def app(request):
-    context = {}
-    return render(request, 'app/www/index.html', context)

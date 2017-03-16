@@ -6,10 +6,8 @@ private/secrets.py
 .idea/dataSources/ef36d9fb-86c3-408e-9ff2-e38ac684335b/_src_/
 .idea/dataSources/ef36d9fb-86c3-408e-9ff2-e38ac684335b/_staging_/
 accounts/migrations/
-db.sqlite3
 events/migrations/
-media/
 places/migrations/
 private/__pycache__/
-static/
 templates/app/
+db.sqlite3

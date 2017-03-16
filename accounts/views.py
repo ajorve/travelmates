@@ -8,7 +8,8 @@ from accounts.models import Member
 from accounts.forms import MemberRegistration
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as authlogin
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
+# from django.contrib.auth.forms import AuthenticationForm
 
 
 def login(request):
@@ -59,23 +60,27 @@ def registration(request):
 
         # Return an 'invalid login' error message.
 
+@login_required
+def app(request):
+    context = {}
+    return render(request, 'app.html', context)
 
-def forgot_password(request):
-    if request.method == 'GET':
-
-        form = MemberForgotPassword()
-
-    elif request.method == 'POST':
-
-        form = MemberForgotPassword(data=request.POST)
-
-        if form.is_valid():
-            change_password = form.save(commit=False)
-            change_password.save()
-
-    context = {'form': form}
-
-    return render(request, 'forgot_page.html', context)
+# def forgot_password(request):
+#     if request.method == 'GET':
+#
+#         form = MemberForgotPassword()
+#
+#     elif request.method == 'POST':
+#
+#         form = MemberForgotPassword(data=request.POST)
+#
+#         if form.is_valid():
+#             change_password = form.save(commit=False)
+#             change_password.save()
+#
+#     context = {'form': form}
+#
+#     return render(request, 'forgot_page.html', context)
 
 
 class GroupViewSet(viewsets.ModelViewSet):

@@ -9,7 +9,7 @@ class Member(AbstractUser):
     Create Member class.
     """
     phone = PhoneNumberField()
-    image = models.ImageField(upload_to='media', null=True)
+    image = models.ImageField(upload_to='user', null=True)
     default_location = GeopositionField(null=False)
 
     def latest_location(self):

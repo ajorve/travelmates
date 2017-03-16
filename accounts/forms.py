@@ -17,8 +17,9 @@ class MemberRegistration(UserCreationForm):
                        attrs={'id': 'pass', 'class': 'input', 'type': 'password', 'data-type': 'password'}),
                    'phone': forms.TextInput(
                        attrs={'id': 'pass', 'class': 'input', 'placeholder': '+1 555-555-5555', 'type': 'tel'}),
-                   'email': forms.EmailInput(
-                       attrs={'id': 'pass', 'class': 'input', 'placeholder': 'example@example.com'})}
+                   # 'email': forms.TextInput(
+                   #     attrs={'id': 'pass', 'class': 'input', 'placeholder': 'example@example.com'})
+                   }
 
     def clean(self, *args, **kwargs):
         exists = Member.objects.filter(username=self.cleaned_data['username']).exists()
@@ -27,10 +28,11 @@ class MemberRegistration(UserCreationForm):
             raise forms.ValidationError('Username already exists, please enter another username..')
         return super().clean(*args, **kwargs)
 
+#
+# class MemberForgotPassword(UserChangeForm):
+#     """For CRUDing Users"""
+#
+#     class Meta(UserChangeForm.Meta):
+#         model = Member
+#         fields = UserChangeForm.Meta.fields
 
-class MemberForgotPassword(UserChangeForm):
-    """For CRUDing Users"""
-
-    class Meta(UserChangeForm.Meta):
-        model = Member
-        fields = UserChangeForm.Meta.fields + ('__all__email',)
