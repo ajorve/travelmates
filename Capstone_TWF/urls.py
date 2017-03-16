@@ -20,8 +20,8 @@ from django.conf.urls import url, include
 from rest_framework import routers
 from accounts.views import GroupViewSet, MemberViewSet
 from places.views import LocationViewSet, ZoneViewSet, GeotagViewSet
-from events.views import JourneyViewSet, CheckInViewSet
-from accounts.views import login, registration
+from events.views import JourneyViewSet, CheckInViewSet, app
+from accounts.views import login, registration, forgot_password
 
 router = routers.DefaultRouter()
 router.register(r'groups', GroupViewSet)
@@ -33,14 +33,18 @@ router.register(r'journeys', JourneyViewSet)
 router.register(r'check_ins', CheckInViewSet)
 
 urlpatterns = [
+
+                  url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
                   url(r'^admin/', admin.site.urls),  # TODO: Django honeypot?
-                  # url(r'^logout/', admin.site.urls),
+                  url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
+                  url(r'^app/?', app, name='app'),
+                  url('^', app),
 
                   # Auth
                   url(r'^login/', login, name='login'),
                   url(r'register/', registration, name='register'),
 
-                  # url(r'^#forgot/', forgot_password )
+                  url(r'^#forgot_password/', forgot_password ),
 
                   # Wire up our API using automatic URL routing.
                   # Additionally, we include login URLs for the browsable API.

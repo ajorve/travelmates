@@ -15,7 +15,7 @@ def login(request):
     if request.method == 'GET':
         form = MemberRegistration()
         context = {'form': form}
-        return render(request, 'index.html', context)
+        return render(request, 'site.html', context)
 
     elif request.method == 'POST':
 
@@ -25,7 +25,7 @@ def login(request):
 
         if user is not None:
             authlogin(request, user)
-            return redirect('https://www.google.com')  # entrance door to app
+            return redirect('/app')  # entrance door to app - redirect
             # Redirect to a success page.
 
         else:
@@ -55,27 +55,27 @@ def registration(request):
 
         else:
             context = {'form': form}
-            return render(request, 'index.html', context)
+            return render(request, 'site.html', context)
 
         # Return an 'invalid login' error message.
 
 
-# def forgot_password(request):
-#     if request.method == 'GET':
-#
-#         form = MemberForgotPassword()
-#
-#     elif request.method == 'POST':
-#
-#         form = MemberForgotPassword(data=request.POST)
-#
-#         if form.is_valid():
-#             change_password = form.save(commit=False)
-#             change_password.save()
-#
-#     context = {'form': form}
-#
-#     return render(request, 'forgot_page.html', context)
+def forgot_password(request):
+    if request.method == 'GET':
+
+        form = MemberForgotPassword()
+
+    elif request.method == 'POST':
+
+        form = MemberForgotPassword(data=request.POST)
+
+        if form.is_valid():
+            change_password = form.save(commit=False)
+            change_password.save()
+
+    context = {'form': form}
+
+    return render(request, 'forgot_page.html', context)
 
 
 class GroupViewSet(viewsets.ModelViewSet):

@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -27,10 +28,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 # Application definition
-# Application Boostrap Default Admin https://github.com/django-admin-bootstrapped/django-admin-bootstrapped
-
 INSTALLED_APPS = [
-    'django_admin_bootstrapped',
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,13 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phonenumber_field',
-    'bootstrap3',
     'geoposition',
     'googlemaps',
     'rest_framework',
     'accounts',
     'events',
     'places',
+    'private',
 
 ]
 
@@ -81,8 +81,7 @@ WSGI_APPLICATION = 'Capstone_TWF.wsgi.application'
 
 AUTH_USER_MODEL = 'accounts.Member'
 
-
-#GEOPOSTION Settings https://github.com/philippbosch/django-geoposition
+# GEOPOSTION Settings https://github.com/philippbosch/django-geoposition
 
 GEOPOSITION_MAP_OPTIONS = {
     'minZoom': 3,
@@ -99,7 +98,6 @@ GEOPOSITION_MAP_WIDGET_HEIGHT = 200
 # API_KEYS
 GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyD-MarMdbhA-5ue35FdjvvhNVVtPVd354I',
 GOOGLE_PLACES_API_KEY = 'AIzaSyAxh2DBPm0WjGhaXBBZEQOgg3UbFij3lrY',
-
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -122,7 +120,6 @@ REST_FRAMEWORK = {
     ],
     'PAGE_SIZE': 10
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -162,10 +159,29 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "accounts", "static"),
-]
+    os.path.join(BASE_DIR, "templates", "app"),
+    ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# Email Settings
+from private.secrets import GMAIL_PASSWORD
+
+DEFAULT_FROM_EMAIL = 'ajorve@gmail.com'
+
+# if DEBUG:
+#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#
+# else:
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'ajorve'
+EMAIL_HOST_PASSWORD = GMAIL_PASSWORD
+EMAIL_PORT = 587
+EMAIL_SUBJECT_PREFIX = 'From Travel With Friends App!'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
