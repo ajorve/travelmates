@@ -29,7 +29,7 @@ class CheckIn(models.Model):
         self.check_in = datetime.now()
 
     def __str__(self):
-        return f"{self.member.first_name} is Checked-In @ {self.zone.member_location}!"
+        return f"{self.member.username} is Checked-In @ {self.zone.member_location}!"
 
     class Meta:
         ordering = ('time',)
