@@ -2,19 +2,19 @@ from places.models import Location, Zone, GeoTag
 from rest_framework import serializers
 
 
-class LocationSerializer(serializers.HyperlinkedModelSerializer):
+class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
-        fields = ('position', )
+        fields = ('position', 'created_time')
 
 
-class ZoneSerializer(serializers.HyperlinkedModelSerializer):
+class ZoneSerializer(serializers.ModelSerializer):
     class Meta:
         model = Zone
-        fields = ('member', 'geotag', 'member_location', 'radius')
+        fields = ('geotag', 'member_location', 'radius_meters')
 
 
-class GeotagSerializer(serializers.HyperlinkedModelSerializer):
+class GeotagSerializer(serializers.ModelSerializer):
     class Meta:
         model = GeoTag
-        fields = ('name', )
+        fields = 'name'

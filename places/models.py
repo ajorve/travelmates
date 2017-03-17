@@ -19,10 +19,9 @@ class GeoTag(models.Model):
 
 
 class Zone(models.Model):
-    member = models.ManyToManyField('accounts.Member', through='events.CheckIn')
     geotag = models.ManyToManyField('places.GeoTag', related_name='zones')
     member_location = models.ForeignKey(Location, null=False)
-    radius = GeopositionField()
+    radius_meters = models.PositiveSmallIntegerField(default=500, blank=True, null=False)
 
     def __str__(self):
         return str(self.member_location)

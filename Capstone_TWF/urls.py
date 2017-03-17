@@ -37,7 +37,7 @@ urlpatterns = [
                   url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
                   url(r'^admin/', admin.site.urls),  # TODO: Django honeypot?
                   url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
-                  url(r'^app/?', app, name='app'),
+                  url(r'^app/', app, name='app'),
 
                   # Auth
                   url(r'^login/', login, name='login'),

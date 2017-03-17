@@ -1,0 +1,26 @@
+html {
+    background-color: #4aa1ff;
+    height: 100%;
+    border: double;
+    border-style: solid;
+    border-width: thick;
+    border-bottom: thick;
+}
+
+#map {
+    height: 80%;
+    width: 100%;
+
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+}

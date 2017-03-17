@@ -1,6 +1,11 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, status
+from rest_framework.response import Response
 from events.serializers import CheckInSerializer, JourneySerializer
 from events.models import Journey, CheckIn
+from django.utils import timezone
+from places.models import Zone, Location
+from geoposition import Geoposition
+from datetime import datetime, timedelta
 
 # Create your views here.
 
@@ -11,6 +16,35 @@ class CheckInViewSet(viewsets.ModelViewSet):
     """
     queryset = CheckIn.objects.all()
     serializer_class = CheckInSerializer
+
+    def create(self, request, *args, **kwargs):
+        """
+        POST USER LOCATION AS CHECK-IN
+        :param request: POST
+        :param args: Member, Geolocation, Time, Radius
+        :return: Users checked-into radius of user within last 2 hours.
+        """
+        member = request.user
+        time = timezone.now()
+        past_timestamp = time - timedelta(hours=2)
+        lat = request.POST['lat']
+        lng = request.POST['lng']
+        radius_meters = request.POST['radius']
+
+        pos = Geoposition(lat, lng)
+        member_location = Location(position=pos, created_time=time)
+        member_location.save()
+
+        zone = Zone( member_location=member_location, radius_meters=radius_meters)
+        zone.save()
+
+        check_in = CheckIn(member=member, time=time, zone=zone, location=member_location)
+        check_in.save()
+
+        # Return USERS by timestamp within a range. (queryset)
+        nearby_users = CheckIn.objects.filter(time__range=(past_timestamp, time))
+        serializer = CheckInSerializer(nearby_users, many=True)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 class JourneyViewSet(viewsets.ModelViewSet):
