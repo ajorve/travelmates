@@ -11,3 +11,9 @@ places/migrations/
 private/__pycache__/
 templates/app/
 db.sqlite3
+pytest.ini
+.coveragerc
+Capstone_TWF/test_settings.py
+static/accounts/
+static/events/
+static/places/

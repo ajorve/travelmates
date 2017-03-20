@@ -41,7 +41,8 @@ urlpatterns = [
 
                   # Auth
                   url(r'^login/', login, name='login'),
-                  url(r'register/', registration, name='register'),
+                  url(r'^accounts/login/', login, name='login'),
+                  url(r'^accounts/register/', registration, name='register'),
 
                   # Wire up our API using automatic URL routing.
                   # Additionally, we include login URLs for the browsable API.

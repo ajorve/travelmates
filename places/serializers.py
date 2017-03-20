@@ -9,9 +9,10 @@ class LocationSerializer(serializers.ModelSerializer):
 
 
 class ZoneSerializer(serializers.ModelSerializer):
+    location = LocationSerializer()
     class Meta:
         model = Zone
-        fields = ('geotag', 'member_location', 'radius_meters')
+        fields = ('geotag', 'location', 'radius_meters')
 
 
 class GeotagSerializer(serializers.ModelSerializer):

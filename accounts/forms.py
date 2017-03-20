@@ -11,11 +11,11 @@ class MemberRegistration(UserCreationForm):
         model = Member
         fields = UserCreationForm.Meta.fields + ('phone',)
         widgets = {'username': forms.TextInput(attrs={'id': 'user', 'class': 'input'}),
-                   'password1': forms.TextInput(
-                       attrs={'id': 'pass', 'class': 'input', 'type': 'password', 'data-type': 'password'}),
-                   'password2': forms.TextInput(
-                       attrs={'id': 'pass', 'class': 'input', 'type': 'password', 'data-type': 'password'}),
-                   'phone': forms.TextInput(
+                   'password1': forms.PasswordInput(
+                       attrs={'class': 'input', 'type': 'password', 'data-type': 'password'}),
+                   'password2': forms.PasswordInput(
+                       attrs={'class': 'input', 'type': 'password', 'data-type': 'password'}),
+                   'phone': forms.NumberInput(
                        attrs={'id': 'pass', 'class': 'input', 'placeholder': '+1 555-555-5555', 'type': 'tel'}),
                    # 'email': forms.TextInput(
                    #     attrs={'id': 'pass', 'class': 'input', 'placeholder': 'example@example.com'})

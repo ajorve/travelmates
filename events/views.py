@@ -32,13 +32,13 @@ class CheckInViewSet(viewsets.ModelViewSet):
         radius_meters = request.POST['radius']
 
         pos = Geoposition(lat, lng)
-        member_location = Location(position=pos, created_time=time)
-        member_location.save()
+        location = Location(position=pos, created_time=time)
+        location.save()
 
-        zone = Zone( member_location=member_location, radius_meters=radius_meters)
+        zone = Zone(location=location, radius_meters=radius_meters)
         zone.save()
 
-        check_in = CheckIn(member=member, time=time, zone=zone, location=member_location)
+        check_in = CheckIn(member=member, time=time, zone=zone, location=location)
         check_in.save()
 
         # Return USERS by timestamp within a range. (queryset)

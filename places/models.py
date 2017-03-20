@@ -20,7 +20,7 @@ class GeoTag(models.Model):
 
 class Zone(models.Model):
     geotag = models.ManyToManyField('places.GeoTag', related_name='zones')
-    member_location = models.ForeignKey(Location, null=False)
+    location = models.ForeignKey(Location, null=False)
     radius_meters = models.PositiveSmallIntegerField(default=500, blank=True, null=False)
 
     def __str__(self):

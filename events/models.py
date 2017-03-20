@@ -9,7 +9,7 @@ class Journey(models.Model):
     name = models.CharField(max_length=15)
     member = models.ManyToManyField('accounts.Member', related_name='members')
     # check_in = models.DateTimeField()
-    zone = models.ManyToManyField('places.Zone', related_name='zones', null=True, blank=True)
+    zone = models.ManyToManyField('places.Zone', related_name='zones', blank=True)
 
     def __str__(self):
         return self.name
@@ -23,7 +23,7 @@ class CheckIn(models.Model):
     time = models.DateTimeField(null=False)
     location = models.ForeignKey('places.Location', related_name='check_ins', blank=False, null=False)
     zone = models.OneToOneField('places.Zone')
-    geotag = models.ManyToManyField('places.GeoTag', related_name='geotags', null=True, blank=True)
+    geotag = models.ManyToManyField('places.GeoTag', related_name='geotags', blank=True)
 
     def timestamp(self):
         self.check_in = datetime.now()
