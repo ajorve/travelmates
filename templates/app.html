@@ -2,6 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Travel With Friends</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script
             src="http://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -10,13 +13,20 @@
     <link href="{% static "css/app.css" %}" type="text/css" rel="stylesheet">
 </head>
 <body>
-<h1>Travel With Friends</h1>
-<span>
+<!-- Start of second page -->
+<div data-role="page" id="map">
+
+    <div data-role="header">
+        <h1>TWF.io</h1>
+    </div><!-- /header -->
+    <span><a href="#profile">My Location</a></span>
+
+    <div id="map" role="main" class="ui-content"></div>
+
+    <span>
     <input type="number" typeof="meters" name="meters" placeholder="Search radius in meters" id="input_meters">
     <button type="submit" content="text" id="submit">Search!</button>
-</span>
-<br>
-<div id="map"></div>
+        <!-- /content -->
 <script>
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -35,11 +45,32 @@
 
     }
 </script>
+        <div data-role="footer">
+        <h4>My Location</h4>
+        <!-- /footer -->
+        </div><!-- /page -->
+</span>
+    <!-- Start of second page -->
+    <div data-role="page" id="profile">
+
+        <div data-role="header">
+            <h1>TWF.io</h1>
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+            <p>Here is where the profile image, username, and checkins go</p>
+            <p><a href="#map">My Location</a></p>
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h4>My Profile</h4>
+        </div><!-- /footer -->
+    </div><!-- /page -->
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfr-G5gPX-mXDbH-GIj9puZtXa9TELc5A
 &callback=initMap">
 </script>
 <script src="{% static "csrf.js" %}" type="text/javascript"></script>
-</body>
+
 <script src="{% static "js/app.js" %}" type="application/javascript"></script>
 </html>
