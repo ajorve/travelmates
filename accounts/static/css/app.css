@@ -1,28 +1,28 @@
 html {
     background-color: #4aa1ff;
     height: 100%;
-    border: double;
     border-style: solid;
     border-width: thick;
     border-bottom: thick;
 }
 
-#map {
-    height: 80%;
-    width: 100%;
-
+#map-canvas {
+    width: 93vw;
+    height: 80vh;
+    padding: 15px;
 }
 
 h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #4aa1ff;
     color: white;
 }
 
 span {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .gm-style-iw .user_info {
@@ -39,3 +39,4 @@ gm-style-iw .user_info img{
     height: 100%;
     width: 100%;
 }
+

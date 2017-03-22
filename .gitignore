@@ -21,4 +21,4 @@ media/user/twf.io_ZDtlDeh.png
 /htmlcov/
 .idea/dataSources/1ede15dd-b305-4953-adec-e381aa923e7e.xml
 .idea/dataSources/1ede15dd-b305-4953-adec-e381aa923e7e/
-/.coverage
+/.coveragerc
