@@ -2,61 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f1e206-0f6d-4280-baaf-4c2b49831460" name="Default" comment="Update initial migrations and overrid the Default Env Variable that DJANGO_SETTINGS_MODULE was pointing to Capstone_TWF.&#10;test_settings">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/keybd_closed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/keybd_open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.coverage" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.coveragerc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/Capstone_TWF___init___py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/Capstone_TWF_settings_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/Capstone_TWF_test_settings_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/Capstone_TWF_urls_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/Capstone_TWF_wsgi_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/accounts___init___py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/accounts_admin_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/accounts_apps_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/accounts_auth_views_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/accounts_forms_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/accounts_models_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/accounts_serializers_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/accounts_tests_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/accounts_views_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/coverage_html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/events___init___py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/events_admin_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/events_apps_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/events_models_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/events_serializers_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/events_tests_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/events_views_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/jquery.ba-throttle-debounce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/jquery.hotkeys.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/jquery.isonscreen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/jquery.tablesorter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/manage_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/places___init___py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/places_admin_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/places_apps_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/places_models_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/places_serializers_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/places_tests_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/places_views_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/private___init___py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/private_secrets_py.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/status.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmlcov/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pytest.ini" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/events/tests/test_models.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Capstone_TWF.iml" afterPath="$PROJECT_DIR$/.idea/Capstone_TWF.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/5baa6721-46c6-462d-81cf-d9beb2f5f707.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/5baa6721-46c6-462d-81cf-d9beb2f5f707.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/ef36d9fb-86c3-408e-9ff2-e38ac684335b.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/ef36d9fb-86c3-408e-9ff2-e38ac684335b.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/static/img/SA_Profile_Pic.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/static/css/app_ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/accounts/static/js/app_ui.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.coverage" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/Capstone_TWF___init___py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/Capstone_TWF_settings_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/Capstone_TWF_test_settings_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/Capstone_TWF_urls_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/Capstone_TWF_wsgi_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/accounts___init___py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/accounts_admin_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/accounts_apps_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/accounts_auth_views_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/accounts_forms_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/accounts_models_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/accounts_serializers_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/accounts_tests_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/accounts_views_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/coverage_html.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/events___init___py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/events_admin_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/events_apps_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/events_models_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/events_serializers_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/events_tests_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/events_views_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/jquery.ba-throttle-debounce.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/jquery.hotkeys.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/jquery.isonscreen.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/jquery.tablesorter.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/keybd_closed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/keybd_open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/manage_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/places___init___py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/places_admin_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/places_apps_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/places_models_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/places_serializers_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/places_tests_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/places_views_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/private___init___py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/private_secrets_py.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/status.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/htmlcov/style.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Anders.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Anders.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Capstone_TWF/test_settings.py" afterPath="$PROJECT_DIR$/Capstone_TWF/test_settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/static/css/app.css" afterPath="$PROJECT_DIR$/accounts/static/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app.html" afterPath="$PROJECT_DIR$/templates/app.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,14 +94,46 @@
     <favorites_list name="Capstone_TWF" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="app.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/app.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="119" column="37" lean-forward="false" selection-start-line="119" selection-start-column="37" selection-end-line="119" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app_ui.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts/static/css/app_ui.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2448">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts/static/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -123,9 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/secrets.py" />
-        <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/templates/register.html" />
         <option value="$PROJECT_DIR$/events/admin.py" />
         <option value="$PROJECT_DIR$/accounts/auth.py" />
         <option value="$PROJECT_DIR$/private/__init__.py" />
@@ -162,18 +185,21 @@
         <option value="$PROJECT_DIR$/places/serializers.py" />
         <option value="$PROJECT_DIR$/events/views.py" />
         <option value="$PROJECT_DIR$/events/serializers.py" />
-        <option value="$PROJECT_DIR$/accounts/static/css/app.css" />
         <option value="$PROJECT_DIR$/accounts/static/js/app.js" />
         <option value="$PROJECT_DIR$/Capstone_TWF/urls.py" />
         <option value="$PROJECT_DIR$/templates/site.html" />
         <option value="$PROJECT_DIR$/accounts/forms.py" />
         <option value="$PROJECT_DIR$/accounts/static/css/site.css" />
-        <option value="$PROJECT_DIR$/templates/app.html" />
         <option value="$PROJECT_DIR$/Capstone_TWF/test_settings.py" />
         <option value="$PROJECT_DIR$/pytest.ini" />
         <option value="$PROJECT_DIR$/.coverage" />
         <option value="$PROJECT_DIR$/.coveragerc" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/events/tests/__init__.py" />
+        <option value="$PROJECT_DIR$/accounts/static/js/app_ui.js" />
+        <option value="$PROJECT_DIR$/accounts/static/css/app_ui.css" />
+        <option value="$PROJECT_DIR$/accounts/static/css/app.css" />
+        <option value="$PROJECT_DIR$/templates/app.html" />
       </list>
     </option>
   </component>
@@ -219,6 +245,136 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Capstone_TWF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -237,6 +393,7 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/private/secrets.py&#10;C:/Users/Anders/Desktop/PDX_Code/Capstone_TWF/Capstone_TWF/.coveragerc&#10;C:/Users/Anders/Desktop/PDX_Code/Capstone_TWF/pytest.ini.py&#10;C:/Users/Anders/Desktop/PDX_Code/Capstone_TWF/templates/app/www/index.html&#10;C:/Users/Anders/Desktop/PDX_Code/Capstone_TWF/Capstone_TWF/test_settings.py&#10;C:/Users/Anders/Desktop/PDX_Code/Capstone_TWF/.coveragerc&#10;C:/Users/Anders/Desktop/PDX_Code/Capstone_TWF/pytest.ini&#10;C:/Users/Anders/Desktop/PDX_Code/Capstone_TWF/accounts/migrations/0001_initial.py" />
     <property name="editor.config.accepted" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -247,18 +404,18 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\accounts\tests" />
-      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\events\tests" />
-      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\accounts\static" />
-      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\templates" />
-      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\places" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF" />
       <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\Capstone_TWF" />
       <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\templates" />
       <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\private" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\accounts\static\img" />
+      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\accounts\tests" />
+      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\events\tests" />
+      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\accounts\static" />
+      <recent name="C:\Users\Anders\Desktop\PDX_Code\Capstone_TWF\templates" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.TWF Debugger">
@@ -631,7 +788,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490052272083</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update initial migrations and overrid the Default Env Variable that DJANGO_SETTINGS_MODULE was pointing to Capstone_TWF.&#10;test_settings">
+      <created>1490217734187</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1490217734187</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -658,10 +822,11 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1695122" sideWeight="0.49679488" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946485" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48410535" sideWeight="0.5048387" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22164634" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4622824" sideWeight="0.4987805" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22164634" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946485" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4622824" sideWeight="0.4987805" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946485" sideWeight="0.49756098" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946485" sideWeight="0.49756098" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946485" sideWeight="0.49756098" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.521599" sideWeight="0.4951613" order="7" side_tool="false" content_ui="tabs" x="-3342" y="470" width="3280" height="1195" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13506098" sideWeight="0.5032051" order="2" side_tool="true" content_ui="tabs" />
@@ -674,7 +839,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="manage.py@Capstone_TWF" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4410058" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946485" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946485" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -742,25 +906,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/accounts/static/img/Google-Maps-for-Android.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/csrf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="31" column="3" lean-forward="false" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/places/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/places/tests/test_serializers.py" />
     <entry file="file://$PROJECT_DIR$/places/tests/test_views.py" />
     <entry file="file://$PROJECT_DIR$/accounts/tests/test_models.py" />
@@ -818,13 +963,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/static/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -868,13 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/static/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -901,13 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1028,16 +1152,8 @@
         <state relative-caret-position="1682">
           <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="e#604#673#0" expanded="true" />
+            <element signature="e#604#673#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,6 +1161,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/static/js/app_ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/static/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/static/css/app_ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2448">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="119" column="37" lean-forward="false" selection-start-line="119" selection-start-column="37" selection-end-line="119" selection-end-column="37" />
           <folding />
         </state>
       </provider>
