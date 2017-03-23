@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1f1e206-0f6d-4280-baaf-4c2b49831460" name="Default" comment="Update initial migrations and overrid the Default Env Variable that DJANGO_SETTINGS_MODULE was pointing to Capstone_TWF.&#10;test_settings">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/5baa6721-46c6-462d-81cf-d9beb2f5f707.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/ef36d9fb-86c3-408e-9ff2-e38ac684335b.xml" afterPath="" />
+    <list default="true" id="e1f1e206-0f6d-4280-baaf-4c2b49831460" name="Default" comment="Pushing proj to deploy to codeship">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/static/css/app.css" afterPath="$PROJECT_DIR$/accounts/static/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/static/css/app_ui.css" afterPath="$PROJECT_DIR$/accounts/static/css/app_ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app.html" afterPath="$PROJECT_DIR$/templates/app.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -662,7 +657,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490217734187</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Pushing proj to deploy to codeship">
+      <created>1490292179745</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1490292179745</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -683,7 +685,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="-12" width="2712" height="1466" extended-state="6" />
+    <frame x="-12" y="-12" width="2712" height="1466" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16526073" sideWeight="0.49679488" order="0" side_tool="false" content_ui="combo" />
@@ -764,7 +766,8 @@
     <MESSAGE value="Removed &quot;Ionic APP&quot; framework from project. Restored API functions." />
     <MESSAGE value="Added new markers and the nearby_users now work. Applied fix to issue with login page not rendering correctly and password fields." />
     <MESSAGE value="Update initial migrations and overrid the Default Env Variable that DJANGO_SETTINGS_MODULE was pointing to Capstone_TWF.&#10;test_settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update initial migrations and overrid the Default Env Variable that DJANGO_SETTINGS_MODULE was pointing to Capstone_TWF.&#10;test_settings" />
+    <MESSAGE value="Pushing proj to deploy to codeship" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pushing proj to deploy to codeship" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
