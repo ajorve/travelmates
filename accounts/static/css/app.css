@@ -1,6 +1,6 @@
 #map-canvas {
-    width: 93vw;
-    height: 80vh;
+    width: 100vw;
+    height: 85vh;
     padding: 15px;
 }
 
@@ -14,9 +14,9 @@ h1{
     color: white;
 }
 
-.ui-fixed-hidden {
-    position: fixed;
-}
+/*.ui-fixed-hidden {*/
+    /*position: absolute;*/
+/*}*/
 
 /*span {*/
     /*display: flex;*/
