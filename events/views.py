@@ -17,6 +17,30 @@ class CheckInViewSet(viewsets.ModelViewSet):
     queryset = CheckIn.objects.all()
     serializer_class = CheckInSerializer
 
+    def list(self, request, *args, **kwargs):
+        """
+        GET Nearby_users, if NOT request.user
+        :param request: GET
+        :param args: Member, Geolocation, Time, Radius
+        :return: Users checked-into radius of user within last 2 hours.
+        """
+        member = request.user
+        time = timezone.now()
+        past_timestamp = time - timedelta(hours=2)
+        lat = request.GET['lat']
+        lng = request.GET['lng']
+        radius_meters = request.GET['radius']
+        pos = Geoposition(lat, lng)
+        location = Location(position=pos, created_time=time)
+        zone = Zone(location=location, radius_meters=radius_meters)
+        check_in = CheckIn(member=member, time=time, zone=zone, location=location)
+
+        # Return USERS by timestamp within a range. (queryset)
+        nearby_users = CheckIn.objects.filter(time__range=(past_timestamp, time)).exclude(member__pk=request.user.pk)
+        serializer = CheckInSerializer(nearby_users, many=True)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
     def create(self, request, *args, **kwargs):
         """
         POST USER LOCATION AS CHECK-IN
@@ -42,8 +66,7 @@ class CheckInViewSet(viewsets.ModelViewSet):
         check_in.save()
 
         # Return USERS by timestamp within a range. (queryset)
-        nearby_users = CheckIn.objects.filter(time__range=(past_timestamp, time))
-        serializer = CheckInSerializer(nearby_users, many=True)
+        serializer = CheckInSerializer(check_in, many=False)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 

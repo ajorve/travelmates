@@ -1,4 +1,5 @@
 body{
+	padding-top: 50pxpx;
 	margin:0;
 	color:#6a6f8c;
 	background:#c8c8c8;
@@ -30,7 +31,7 @@ a{color:inherit;text-decoration:none}
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
-	top:0;
+	top:25px;
 	left:0;
 	right:0;
 	bottom:0;
@@ -54,7 +55,7 @@ a{color:inherit;text-decoration:none}
 }
 .login-html .tab{
 	font-size:22px;
-	padding-bottom:5px;
+	padding-bottom:25px;
 	margin: 0 15px 10px 0;
 	display:inline-block;
 	border-bottom:2px solid transparent;

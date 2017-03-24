@@ -6,7 +6,7 @@ from rest_framework import viewsets
 from accounts.serializers import GroupSerializer, MemberSerializer
 from accounts.models import Member
 from accounts.forms import MemberRegistration
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, logout
 from django.contrib.auth import login as authlogin
 from django.contrib.auth.decorators import login_required
 # from django.contrib.auth.forms import AuthenticationForm
@@ -60,10 +60,16 @@ def registration(request):
 
         # Return an 'invalid login' error message.
 
+
 @login_required
 def app(request):
     context = {}
     return render(request, 'app.html', context)
+
+
+def logout_app(request):
+    if request.method == 'GET':
+        return redirect(reverse('login'))
 
 # def forgot_password(request):
 #     if request.method == 'GET':

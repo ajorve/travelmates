@@ -24,4 +24,4 @@ class Zone(models.Model):
     radius_meters = models.PositiveSmallIntegerField(default=500, blank=True, null=False)
 
     def __str__(self):
-        return str(self.member_location)
+        return str(self.location)

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db.sqlite3" uuid="1ede15dd-b305-4953-adec-e381aa923e7e">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="Capstone_TWF@localhost" uuid="61e01dd8-364e-4d09-b5de-11c21e0656aa">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db.sqlite3</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/Capstone_TWF</jdbc-url>
     </data-source>
   </component>
 </project>

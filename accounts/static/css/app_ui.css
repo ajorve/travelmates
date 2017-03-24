@@ -7,8 +7,8 @@
 .profile-userpic img {
   float: none;
   margin: 0 auto;
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 175px;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
   border-radius: 50% !important;
@@ -79,19 +79,20 @@
   color: #5b9bd1;
 }
 
-/*.profile-usermenu ul li.active {*/
-  /*border-bottom: none;*/
-/*}*/
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
 
-/*.profile-usermenu ul li.active a {*/
-  /*color: #5b9bd1;*/
-  /*background-color: #f6f9fb;*/
-  /*border-left: 2px solid #5b9bd1;*/
-  /*margin-left: -2px;*/
-/*}*/
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
 
 /* Profile Content */
 .profile-content {
+  border-color: #4aa1ff;
   padding: 10px;
   background: #fff;
   min-height: 460px;

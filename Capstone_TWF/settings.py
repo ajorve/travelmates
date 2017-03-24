@@ -109,8 +109,12 @@ GOOGLE_PLACES_API_KEY = 'AIzaSyAxh2DBPm0WjGhaXBBZEQOgg3UbFij3lrY',
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Capstone_TWF',
+        'USER': 'twf_admin',
+        'PASSWORD': 'batman0325',
+        'HOST': '',
+        'PORT': '',
     }
 }
 

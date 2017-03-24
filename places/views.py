@@ -19,7 +19,7 @@ class ZoneViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
-    queryset = Zone.objects.all().order_by('-member_location')
+    queryset = Zone.objects.all()
     serializer_class = ZoneSerializer
 
 

@@ -21,7 +21,7 @@ from rest_framework import routers
 from accounts.views import GroupViewSet, MemberViewSet
 from places.views import LocationViewSet, ZoneViewSet, GeotagViewSet
 from events.views import JourneyViewSet, CheckInViewSet
-from accounts.views import login, registration, app
+from accounts.views import login, registration, app, logout_app
 
 router = routers.DefaultRouter()
 router.register(r'groups', GroupViewSet)
@@ -42,7 +42,9 @@ urlpatterns = [
                   # Auth
                   url(r'^login/', login, name='login'),
                   url(r'^accounts/login/', login, name='login'),
+                  url(r'^register/', registration, name='register'),
                   url(r'^accounts/register/', registration, name='register'),
+                  url(r'^logout/', logout_app, name='success_auth_logout'),
 
                   # Wire up our API using automatic URL routing.
                   # Additionally, we include login URLs for the browsable API.
