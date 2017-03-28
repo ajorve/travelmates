@@ -8,7 +8,9 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>twf_admin</user-name>
+      <introspection-schemas>Capstone_TWF:public</introspection-schemas>
       <resolve-scope>Capstone_TWF:public,twf_admin</resolve-scope>
+      <unqualified-resolve-schemas>Capstone_TWF:public,twf_admin</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

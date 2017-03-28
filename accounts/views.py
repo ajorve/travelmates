@@ -6,7 +6,7 @@ from rest_framework import viewsets
 from accounts.serializers import GroupSerializer, MemberSerializer
 from accounts.models import Member
 from accounts.forms import MemberRegistration
-from django.contrib.auth import authenticate, logout
+from django.contrib.auth import authenticate
 from django.contrib.auth import login as authlogin
 from django.contrib.auth.decorators import login_required
 # from django.contrib.auth.forms import AuthenticationForm
@@ -24,13 +24,16 @@ def login(request):
         password = request.POST['password']
         user = authenticate(username=username, password=password)
 
+        # import pdb; pdb.set_trace()
+
         if user is not None:
             authlogin(request, user)
             return redirect('/app')  # entrance door to app - redirect
             # Redirect to a success page.
 
         else:
-            return redirect('/')
+            messages.error(request, message="Credentials are not valid, please re-enter or register.")
+            return redirect('login')
 
             # Return an 'invalid login' error message.
 
@@ -48,8 +51,8 @@ def registration(request):
             password1 = request.POST['password1']
             password2 = request.POST['password2']
             phone = request.POST['phone']
-
-            member = Member.objects.create_user('username', 'password1')
+            # import pdb; pdb.set_trace()
+            member = Member.objects.create_user(username=username, password=password1, phone=phone)
 
             messages.success(request, message="Account Created Successfully, Please Login!")
             return redirect(reverse('login'))
@@ -61,7 +64,7 @@ def registration(request):
         # Return an 'invalid login' error message.
 
 
-@login_required
+@login_required(login_url='/login/')
 def app(request):
     context = {}
     return render(request, 'app.html', context)

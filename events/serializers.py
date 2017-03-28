@@ -5,14 +5,16 @@ from accounts.serializers import MemberSerializer
 
 
 class JourneySerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Journey
-        fields = ('name', 'member', 'zone',)
+        fields = ('name', 'member', 'zone')
 
 
 class CheckInSerializer(serializers.ModelSerializer):
     zone = ZoneSerializer()
     member = MemberSerializer()
+
     class Meta:
         model = CheckIn
         fields = ('member', 'journey', 'time', 'zone', 'geotag')

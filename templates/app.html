@@ -5,6 +5,8 @@
     <title>Travel With Friends</title>
     <link rel="shortcut icon" href="{% static "img/twf.io.png" %}" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% static "bower_components/sweetalert/dist/sweetalert.min.js"%}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "bower_components/sweetalert/dist/sweetalert.css"%}">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
@@ -56,23 +58,23 @@
     <br>
     <hr>
     <!-- PROFILE CONTENT -->
-    <div class="ui-body" id="profile">
+    <div class="ui-content" id="profile">
         <div class="container" role="columnheader">
             <div class="row profile">
                 <div class="col-md-12">
                     <div class="profile-sidebar">
                         <!-- SIDEBAR USERPIC -->
                         <div class="profile-userpic">
-                            <img src="{% static "img/SA_Profile_Pic.jpg" %}" class="img-responsive" alt="userImage">
+                            <img src="{% static "img/test_add_user.png" %}" class="img-responsive" alt="userImage">
                         </div>
                         <!-- END SIDEBAR USERPIC -->
                         <!-- SIDEBAR USER TITLE -->
                         <div class="profile-usertitle">
                             <div class="profile-usertitle-name">
-                                AJORVE
+                                {{ username.text }}
                             </div>
                             <div class="profile-usertitle-job">
-                                ABOUT ME
+                                {{ email.text }}
                             </div>
                         </div>
                         <!-- END SIDEBAR USER TITLE -->
@@ -86,19 +88,19 @@
                         <div class="profile-usermenu">
                             <ul class="nav">
                                 <li>
-                                    <a href="#history">
-                                        <i class="glyphicon glyphicon-dashboard"></i>History </a>
+                                    <a id="#history">
+                                        <i class="glyphicon glyphicon-dashboard"></i>History</a>
                                 </li>
                                 <li>
-                                    <a href="#check_in">
+                                    <a id="#check_in">
                                         <i class="glyphicon glyphicon-check"></i>Check-in </a>
                                 </li>
                                 <li>
-                                    <a href="#events">
+                                    <a id="#events">
                                         <i class="glyphicon glyphicon-calendar"></i>Events </a>
                                 </li>
                                 <li>
-                                    <a href="#uploadImage">
+                                    <a id="#uploadImage">
                                         <i class="glyphicon glyphicon-camera"></i>Upload Photos </a>
                                 </li>
                             </ul>
@@ -166,7 +168,6 @@
         </div><!-- /navbar -->
     </div><!-- /footer -->
     <br>
-    <hr>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfr-G5gPX-mXDbH-GIj9puZtXa9TELc5A
             &callback=get_loc">

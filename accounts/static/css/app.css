@@ -14,3 +14,13 @@ h1{
     color: white;
 }
 
+.user_info {
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
+    padding: 100%;
+    margin: 10px;
+    border: #4aa1ff;
+
+}
+

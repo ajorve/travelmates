@@ -21,7 +21,7 @@ class CheckIn(models.Model):
     member = models.ForeignKey('accounts.Member', on_delete=models.CASCADE, related_name='check_ins')
     journey = models.ForeignKey('events.Journey', related_name='checked_into', null=True, blank=True)
     time = models.DateTimeField(null=False)
-    location = models.ForeignKey('places.Location', related_name='check_ins', blank=False, null=False)
+    location = models.ForeignKey('places.Location', related_name='check_ins', blank=True, null=False)
     zone = models.OneToOneField('places.Zone') #TODO; Fix Zones so that multi-users can be checked in to same Zone.
     geotag = models.ManyToManyField('places.GeoTag', related_name='geotags', blank=True)
 
@@ -29,8 +29,8 @@ class CheckIn(models.Model):
         self.check_in = datetime.now()
 
     def __str__(self):
-        return f"{self.member.username} is Checked-In @ {self.zone.location}!"
+        return f"{self.member.username} is Checked-In to {self.zone.location}  @  {self.time} !"
 
     class Meta:
-        ordering = ('time',)
+        ordering = ('-time',)
 

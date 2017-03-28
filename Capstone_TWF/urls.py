@@ -13,15 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.conf import settings
-from django.conf.urls.static import static
 from django.conf.urls import url, include
+from django.conf.urls.static import static
+from django.contrib import admin
 from rest_framework import routers
+
 from accounts.views import GroupViewSet, MemberViewSet
-from places.views import LocationViewSet, ZoneViewSet, GeotagViewSet
-from events.views import JourneyViewSet, CheckInViewSet
 from accounts.views import login, registration, app, logout_app
+from events.views import JourneyViewSet, CheckinViewSet, MemberCheckinViewSet
+from places.views import LocationViewSet, ZoneViewSet, GeotagViewSet
 
 router = routers.DefaultRouter()
 router.register(r'groups', GroupViewSet)
@@ -30,7 +31,7 @@ router.register(r'locations', LocationViewSet)
 router.register(r'zones', ZoneViewSet)
 router.register(r'geotags', GeotagViewSet)
 router.register(r'journeys', JourneyViewSet)
-router.register(r'check_ins', CheckInViewSet)
+router.register(r'check_ins', CheckinViewSet)
 
 urlpatterns = [
 
@@ -38,13 +39,15 @@ urlpatterns = [
                   url(r'^admin/', admin.site.urls),  # TODO: Django honeypot?
                   url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
                   url(r'^app/', app, name='app'),
+                  url(r'^members/check_ins', MemberCheckinViewSet.as_view(), name='memberView'),
 
                   # Auth
                   url(r'^login/', login, name='login'),
+                  url(r'^logout/', logout_app, name='successfully_logged_out'),
                   url(r'^accounts/login/', login, name='login'),
-                  url(r'^register/', registration, name='register'),
                   url(r'^accounts/register/', registration, name='register'),
-                  url(r'^logout/', logout_app, name='success_auth_logout'),
+                  url(r'^register/', registration, name='register'),  #TODO; add LOGIN_REDIRECT_URL
+                  url(r'^$', login),
 
                   # Wire up our API using automatic URL routing.
                   # Additionally, we include login URLs for the browsable API.

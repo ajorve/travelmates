@@ -18,4 +18,4 @@ class ZoneSerializer(serializers.ModelSerializer):
 class GeotagSerializer(serializers.ModelSerializer):
     class Meta:
         model = GeoTag
-        fields = 'name'
+        fields = ('name',)
