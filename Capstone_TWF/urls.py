@@ -36,7 +36,8 @@ router.register(r'check_ins', CheckinViewSet)
 urlpatterns = [
 
                   url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
-                  url(r'^admin/', admin.site.urls),  # TODO: Django honeypot?
+                  url(r'^admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
+                  url(r'^ajorve/', admin.site.urls),  # TODO: Django honeypot?
                   url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
                   url(r'^app/', app, name='app'),
                   url(r'^members/check_ins', MemberCheckinViewSet.as_view(), name='memberView'),
@@ -46,7 +47,7 @@ urlpatterns = [
                   url(r'^logout/', logout_app, name='successfully_logged_out'),
                   url(r'^accounts/login/', login, name='login'),
                   url(r'^accounts/register/', registration, name='register'),
-                  url(r'^register/', registration, name='register'),  #TODO; add LOGIN_REDIRECT_URL
+                  url(r'^register/', registration, name='register'),  # TODO; add LOGIN_REDIRECT_URL
                   url(r'^$', login),
 
                   # Wire up our API using automatic URL routing.
@@ -55,4 +56,4 @@ urlpatterns = [
                   # DRF
                   url(r'^api/', include(router.urls)),
                   url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -27,20 +27,14 @@ class MemberCheckinViewSet(APIView):
         """
         time = timezone.localtime(timezone.now())
         past_timestamp = time - timedelta(hours=2)
-        print(past_timestamp)
         # lat = request.GET['lat']
         # lng = request.GET['lng']
         # radius_meters = request.GET['radius']
         # pos = Geoposition(lat, lng)
-        # import pdb; pdb.set_trace()
+
         # Return USERS by timestamp within a range. (queryset)
-        # print(request.GET)
-        nearby_users = CheckIn.objects.filter(time__range=(past_timestamp, time)).exclude(member__pk=request.user.pk).latest('time')
-        print(request.user.pk)
-        # from django.core import serializers
-        # data = serializers.serialize("json", nearby_users)
-        # nearby_users = CheckIn.objects.filter(time__range=(past_timestamp, time)).exclude(member__pk=request.user.pk).latest('time')
-        serializer = CheckInSerializer(nearby_users)
+        nearby_users = CheckIn.objects.filter(time__range=(past_timestamp, time)).exclude(member__pk=request.user.pk)
+        serializer = CheckInSerializer(nearby_users, many=True)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 

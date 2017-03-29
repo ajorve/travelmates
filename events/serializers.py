@@ -1,7 +1,8 @@
-from events.models import Journey, CheckIn
 from rest_framework import serializers
-from places.serializers import ZoneSerializer
+
 from accounts.serializers import MemberSerializer
+from events.models import Journey, CheckIn
+from places.serializers import ZoneSerializer
 
 
 class JourneySerializer(serializers.ModelSerializer):

@@ -22,7 +22,7 @@ class CheckIn(models.Model):
     journey = models.ForeignKey('events.Journey', related_name='checked_into', null=True, blank=True)
     time = models.DateTimeField(null=False)
     location = models.ForeignKey('places.Location', related_name='check_ins', blank=True, null=False)
-    zone = models.OneToOneField('places.Zone') #TODO; Fix Zones so that multi-users can be checked in to same Zone.
+    zone = models.ForeignKey('places.Zone') #TODO; Fix Zones so that multi-users can be checked in to same Zone.
     geotag = models.ManyToManyField('places.GeoTag', related_name='geotags', blank=True)
 
     def timestamp(self):

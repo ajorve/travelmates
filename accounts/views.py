@@ -1,14 +1,17 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import Group
 from django.contrib import messages
-from django.urls import reverse
-from rest_framework import viewsets
-from accounts.serializers import GroupSerializer, MemberSerializer
-from accounts.models import Member
-from accounts.forms import MemberRegistration
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as authlogin
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import Group
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from rest_framework import viewsets
+
+from accounts.forms import MemberRegistration
+from accounts.models import Member
+from accounts.serializers import GroupSerializer, MemberSerializer
+
+
 # from django.contrib.auth.forms import AuthenticationForm
 
 

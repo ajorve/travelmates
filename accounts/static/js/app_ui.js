@@ -1,27 +1,10 @@
-(function loadPages() {
+(function appUI () {
     "use strict";
-    var $profilePage = $('#profile');
-    var $mapPage = $('#map-canvas');
-    var $settingsPage = $('#settings');
-
-    $profilePage.on('click', function (event) {
-        // $mapPage.hide();
-        // $settingsPage.hide();
-        this.addClass('ui-btn-active')
-
+    $("input[type=file]").change(function () {
+        var file = $("input[type=file]")[0].files[0];
+        alert(file.name + "\n" +
+            file.type + "\n" +
+            file.size + "\n" +
+            file.lastModifiedDate);
     });
-
-    $mapPage.on('click', function (event) {
-        // $profilePage.hide();
-        // $settingsPage.hide();
-        this.addClass('ui-btn-active')
-
-    });
-
-    $settingsPage.on('click', function (event) {
-        // $profilePage.hide();
-        // $mapPage.hide();
-        this.addClass('ui-btn-active')
-
-    })
 })();
