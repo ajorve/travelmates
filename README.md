@@ -21,7 +21,7 @@ Current Scope of Work:
 
 Here is a mockup using [draw.io](https://draw.io/) showing some basic ideas.
 
-Here is the [link](docs/twf_mockups.pdf) to the PDF image of the vision I have for this project. 
+Here is the [link](docs/twf_mockups.pdf) --link broken-- to the PDF image of the vision I have for this project. 
 
 
 ### Data Model
